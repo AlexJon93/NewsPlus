@@ -1,24 +1,12 @@
-# README
+# RAD Assign - Alex Jarvis
+### s3607170 | Alexander Jarvis
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Level Attempted: Pass
+- Heroku link: 
 
-Things you may want to cover:
+## Timelog
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Date | Time 
+--|--|--
+12/04/20 | 2:29:54
+13/04/20 | 3:15:50
