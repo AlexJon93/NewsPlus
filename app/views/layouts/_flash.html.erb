@@ -1,0 +1,13 @@
+<% flash.each do |type, message| %>
+    <div class="flash alert alert-<%= type %>">
+        <%if message.respond_to?('each')%>
+            <% message.each do |item| %>
+                <li>
+                    <%= item %>
+                </li>
+            <% end %>
+        <% else %>
+            <%= message %>
+        <% end %>
+    </div>
+<% end %>
