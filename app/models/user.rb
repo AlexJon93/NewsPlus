@@ -10,10 +10,11 @@ class User < ApplicationRecord
                                             uniqueness: {case_sensitive: false}
     validates :mobile,      presence: true, format: {with: VALID_PHONE_REGEX},
                                             length: {minimum: 9, maximum:13}
+    has_many :posts
 end
 
 # User schema:
-# username              string, null: false
-# email                 string, null: false
-# mobile                string, null: false
-# password_digest       string, null: false
+# username              string
+# email                 string
+# mobile                string
+# password_digest       string
