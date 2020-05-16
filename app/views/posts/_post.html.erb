@@ -4,14 +4,14 @@
     </div>
     <div class="content col-md-11">
         <div class="title row">
-            <h3>MIDI 2.0 Specifications Available for Download</h3>
+            <h3><%= post.title %></h3>
         </div>
         <div class="row">
-            <div class='item col-md-2'>Jack</div>
-            <div class='item col-md-2'>2020-05-22 03:23:48</div>
-            <div class='item col-md-2'>A.I.</div>
+            <div class='item col-md-2'><%= post.user.username %></div>
+            <div class='item col-md-2'><%= post.created_at %></div>
+            <div class='item col-md-2'><%= post.topic %></div>
             <div class='item col-md-1 col-md-offset-4'><%= fa_icon "comments", text: 36 %></div>
-            <div class='item col-md-1'><%= fa_icon "eye", text: 685 %></div>
+            <div class='item col-md-1'><%= fa_icon "eye", text: post.views %></div>
         </div>
     </div>
 </div>
