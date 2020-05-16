@@ -22,6 +22,10 @@
 $gray-background: #ECECEC;
 $white-background: #FFFFFF;
 $white-text: #FFFFFF;
+$highlight-color: #337ab7;
+
+// sizes
+$footer-height: 50px;
 
 // overall
 body{
@@ -31,6 +35,8 @@ body{
     .main{
         margin-top: 5vh;
     }
+
+    margin-bottom: $footer-height;
 }
 
 .jumbotron {
@@ -65,8 +71,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 50px;
-    background-color: #337ab7;
+    height: $footer-height;
+    background-color: $highlight-color;
     p {
         margin: 15px 0;
         color: $white-text;

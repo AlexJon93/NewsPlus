@@ -1,8 +1,10 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$highlight-color: #337ab7;
+
 .post{
-    padding: 1vh 1vw;
+    // padding: 1vh 1vw;
     .profile-pic{
         width: 64px;
         border-radius: 50%;
@@ -13,5 +15,51 @@
     }
     .item{
         text-align: center;
+    }
+}
+
+.sorters{
+    margin-bottom: 2vh;
+    .selected{
+        color: $highlight-color;
+    }
+}
+
+.sidebar{
+    .panel{
+        padding: 1vh 1vw;
+    }
+
+    .recent{
+        .user{
+            text-align: center;
+            position: relative;
+            margin: 2px;
+            max-width: 90px;
+            .name{
+                font-weight: bold;
+            }
+            .likes{
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                color: white;
+            }
+        }
+    }
+
+    .topics{
+        .topic-btn{
+            padding: 1vh 1.5vw;
+            margin: 0.2vh 0.3vw;
+        }
+    }
+
+    .populars{
+        .popular_post{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .post_title{
+            margin-right: 25px;
+        }
     }
 }

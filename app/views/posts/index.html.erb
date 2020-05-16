@@ -1,1 +1,10 @@
-<%= render 'post' %>
+
+<div class='main-section col-md-9'>
+    <%= render 'posts/homepage/filters' %>
+    <div class='posts'>
+        <%= render 'post' %>
+    </div>
+</div>
+<div class='sidebar col-md-3'>
+    <%= render 'posts/homepage/sidebar' %>
+</div>
