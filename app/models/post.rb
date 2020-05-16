@@ -11,3 +11,4 @@ end
 # title       string
 # topic       string
 # user        reference, null: false
+# views       integer, default: 0

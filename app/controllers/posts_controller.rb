@@ -4,20 +4,16 @@ class PostsController < ApplicationController
     def index
         @recent_users = [
             {
-                username: 'Alex',
-                likes: 140
+                username: 'Alex'
             },
             {
-                username: 'Stan',
-                likes: 148
+                username: 'Stan'
             },
             {
-                username: 'Sarah',
-                likes: 128
+                username: 'Sarah'
             },
             {
-                username: 'Guy',
-                likes: 100
+                username: 'Guy'
             }
         ]
 
