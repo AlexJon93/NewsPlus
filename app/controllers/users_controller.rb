@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_login, only: [:home]
+  layout 'initial', only: [:new]
 
   def new
     @user = User.new
@@ -16,17 +16,8 @@ class UsersController < ApplicationController
     end
   end
 
-  def home
-  end
-
   private
     def user_params
       params.require(:user).permit(:username, :email, :mobile, :password, :password_confirmation)
-    end
-
-    def check_login
-      unless logged_in?
-        redirect_to login_path
-      end
     end
 end
