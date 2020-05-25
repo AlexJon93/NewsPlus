@@ -5,3 +5,5 @@
 $(document).ready ->
     $('.topic-btn').click ->
         clicked_val = $(this).toggleClass('active')
+    $('.filterbtn').click ->
+        $(this).addClass('selected').siblings().removeClass('selected')
