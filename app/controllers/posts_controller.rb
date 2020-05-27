@@ -9,7 +9,21 @@ class PostsController < ApplicationController
         @popular_posts = Post.order(:views)
         @recent_users = User.order(:last_active_at)
 
-        @topics = ['A.I', 'V.R', 'RMIT', 'Games', 'Rails', 'Go', 'Web', 'M.L.', 'Joke', 'React', 'Vue', 'Node', 'iOS', 'AWS']
+        @topics = Post.topics
+    end
+
+    def new
+        @post = Post.new
+    end
+
+    def create
+        @post = current_user.posts.build(post_params)
+        if @post.save
+            redirect_to root_path
+        else
+            flash[:danger] = @post.errors.full_messages
+            redirect_to new_post_path
+        end
     end
 
     def update_home
@@ -33,4 +47,9 @@ class PostsController < ApplicationController
             format.js
         end
     end
+
+    private
+        def post_params
+            params.require(:post).permit(:topic, :title, :content)
+        end
 end

@@ -1,0 +1,23 @@
+<%= form_with(model: @post, class:'form-horizontal post-form', local: true) do |f| %>
+    <div class="form-group">
+        <div class="input-group col-md-3">
+            <%= f.label         :topic, 'Topic', class: 'input-group-addon' %>
+            <%= f.select        :topic, Post.topics, {}, {class: 'form-control'} %>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <%= f.label         :title, 'Title', class: 'input-group-addon' %>
+            <%= f.text_field    :title, placeholder: 'Enter post title here', class: 'form-control' %>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <%= f.text_area     :content, placeholder: 'Enter your post here', rows: '10', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.submit "Submit", class: 'btn btn-primary'%>
+    </div>
+<% end %>

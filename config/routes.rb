@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   delete    '/logout',        to: 'sessions#destroy'
   get       '/update_home',   to: 'posts#update_home'
   resources :users, only: [:create]
+  resources :posts
 end

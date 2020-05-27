@@ -15,6 +15,7 @@
         </div>
     </div>
     <div class='new-post col-md-2'>
-        <%= link_to 'New Post', login_path, class: 'btn btn-default' %>
+        <% if logged_in? %><%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
+        <% else %><%= link_to 'New Post', login_path, class: 'btn btn-default' %><% end %>
     </div>
 </div>
