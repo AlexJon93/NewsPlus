@@ -1,6 +1,6 @@
 <div class='panel topics'>
     <h4>Topic</h4>
     <% @topics.each do |topic| %>
-        <%= link_to topic, update_home_path(value: 'topic', topic: topic), value: topic, class: 'btn btn-default topic-btn', remote: true%>
+        <%= link_to topic, update_home_path(topic: topic), class: 'btn btn-default topic-btn', remote: true%>
     <% end %>
 </div>

@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get       '/signup',        to: 'users#new'
   post      '/signup',        to: 'users#create'
   delete    '/logout',        to: 'sessions#destroy'
-  get      '/update_home',   to: 'posts#update_home'
+  get       '/update_home',   to: 'posts#update_home'
   resources :users, only: [:create]
 end

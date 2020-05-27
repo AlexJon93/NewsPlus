@@ -1,9 +1,9 @@
 <div class='sorters row'>
     <div class="toggles col-md-5">
         <div class='btn-group' role='group'>
-            <%= link_to 'Recent Post', update_home_path(value: 'recent'), class: 'btn filterbtn btn-default selected', remote: true%>
-            <%= link_to 'Selected Post', update_home_path(value: 'filtered'), class: 'btn filterbtn btn-default', remote: true%>
-            <%= link_to 'My Setting', update_home_path(value: 'custom'), class: 'btn filterbtn btn-default', remote: true%>
+            <%= link_to 'Recent Post', update_home_path(filter: 'recent'), class: 'btn filterbtn btn-default selected', remote: true%>
+            <%= link_to 'Selected Post', update_home_path(filter: 'filtered'), class: 'btn filterbtn btn-default', remote: true%>
+            <%= link_to 'My Setting', update_home_path(filter: 'custom'), class: 'btn filterbtn btn-default', remote: true%>
         </div>
     </div>
     <div class='searcher col-md-5'>
