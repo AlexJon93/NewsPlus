@@ -1,9 +1,9 @@
 <div class='sorters row'>
     <div class="toggles col-md-5">
         <div class='btn-group' role='group'>
-            <button type='button' class='btn btn-default selected'>Recent Post</button>
-            <button type='button' class='btn btn-default'>Selected Post</button>
-            <button type='button' class='btn btn-default'>My Setting</button>
+            <%= link_to 'Recent Post', update_home_path(filter: 'recent'), class: 'btn filterbtn btn-default selected', remote: true%>
+            <%= link_to 'Selected Post', update_home_path(filter: 'filtered'), class: 'btn filterbtn btn-default', remote: true%>
+            <%= link_to 'My Setting', update_home_path(filter: 'custom'), class: 'btn filterbtn btn-default', remote: true%>
         </div>
     </div>
     <div class='searcher col-md-5'>
@@ -15,6 +15,7 @@
         </div>
     </div>
     <div class='new-post col-md-2'>
-        <button type="button" class="btn btn-default">New Post</button>
+        <% if logged_in? %><%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
+        <% else %><%= link_to 'New Post', login_path, class: 'btn btn-default' %><% end %>
     </div>
 </div>

@@ -1,0 +1,46 @@
+<div class="user-profile">
+    <div class="row centre user-info">
+        <div class="row col-md-12">
+            <%= image_tag("https://image.flaticon.com/icons/png/512/123/123172.png", size: "128", alt: "username", class: "profile-pic") %>
+        </div>
+        <div class="row col-md-12">
+            <h3><%= @user.username %></h3>
+        </div>
+        <div class="row">
+            <h4 class='col-md-2 col-md-offset-4'><%= fa_icon "calendar", text: @user.created_at.strftime("%Y-%m-%d") %></h4>
+            <h4 class='col-md-2'><%= fa_icon "map-marker", text: "Pallet Town" %></h4>
+        </div>
+    </div>
+    <div class="row user-activity">
+        <div class='activity col-md-6'>
+            <div class="panel panel-default">
+                <div class="panel-heading"><%= @user.username %>'s recent posts:</div>
+                <div class='post-activity'>
+                    <u class="list-group">
+                        <div class="container-fluid">
+                            <% @user.posts.order(:created_at).each do |post| %>
+                                <li class='row list-group-item'>
+                                    <div class="detail col-md-6">
+                                        <p class='post-title'>
+                                            <%= post.title %>
+                                        </p>
+                                    </div>
+                                    <div class="detail col-md-3 col-md-offset-3">
+                                        <p class='post-date'>
+                                            <%= post.created_at.strftime("%Y-%m-%d") %>
+                                        </p>
+                                    </div>
+                                </li>
+                            <% end %>
+                        </div>
+                    </u>
+                </div>
+            </div>
+        </div>
+        <div class='activity col-md-6'>
+            <div class="panel panel-default">
+                <div class="panel-heading"><%= @user.username %>'s recent comments:</div>
+            </div>
+        </div>
+    </div>
+</div>

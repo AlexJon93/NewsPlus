@@ -53,6 +53,15 @@ body{
     }
 }
 
+.centre{
+    width: 100%;
+    text-align: center;
+}
+
+a:focus{
+    outline: thin;
+}
+
 // forms
 
 form{
@@ -85,9 +94,9 @@ footer {
 .navbar{
     .profile{
         padding: 3px;
-        .img-circle{
-            height: 100%;
-            border: solid black;
-        }
+    }
+    .img-circle{
+        height: 100%;
+        border: solid black;
     }
 }

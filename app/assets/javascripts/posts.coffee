@@ -2,6 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready ->
+document.addEventListener("turbolinks:load", ->
     $('.topic-btn').click ->
         clicked_val = $(this).toggleClass('active')
+    $('.filterbtn').click ->
+        $(this).addClass('selected').siblings().removeClass('selected')
+)
