@@ -1,0 +1,32 @@
+<div class="jumbotron post-view">
+    <div class="post-header row">
+        <div class="post-title row">
+            <h2><%= @post.title %></h2>
+        </div>
+        <div class="post-details row">
+            <div class="post-topic col-md-1">
+                <span><%= @post.topic %></span>
+            </div>
+            <div class="post-comments col-md-1 col-md-offset-9">
+                <%= fa_icon "comments", text: 0 %>
+            </div>
+            <div class="post-views col-md-1">
+                <%= fa_icon "eye", text: @post.views %>
+            </div>
+        </div>
+    </div>
+    <div class="post-user row">
+        <div class="col-md-1">
+            <%= default_image 64 %>
+        </div>
+        <div class="col-md-1 post-username">
+            <%= link_to @post.user.username, @post.user %>
+        </div>
+        <div class="col-md-2 post-date">
+            <%= @post.created_at %>
+        </div>
+    </div>
+    <div class="post-content row">
+        <p><%= @post.content %></p>
+    </div>
+</div>
