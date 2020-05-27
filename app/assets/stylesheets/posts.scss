@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $highlight-color: #337ab7;
+$heading-color: #0000009d;
+$backdrop-color: hsla(0, 0%, 0%, 0.13);
 
 .post{
     // padding: 1vh 1vw;
@@ -12,6 +14,14 @@ $highlight-color: #337ab7;
     }
     .title{
         padding-left: 1vw;
+        a{
+            text-decoration: none;
+            color: $heading-color;
+        }
+
+        a:hover{
+            color: $highlight-color;
+        }
     }
     .item{
         text-align: center;
@@ -20,6 +30,41 @@ $highlight-color: #337ab7;
 
 .post-form{
     margin: 1vh 3vw;
+}
+
+.post-view{
+    
+    .post-topic{
+        span{
+            background-color: $heading-color;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        font-weight: bolder;
+        color: white;
+    }
+
+    .post-comments, .post-views{
+        color: gray;
+    }
+
+    .post-user{
+        display: flex;
+        align-items: center; /* align vertical */
+        margin-top: 2vh;
+        padding: 2vh 2vw;
+        background-color: $backdrop-color;
+        border-radius: 10px;
+        .post-username, .post-date{
+            font-size: medium;
+        }
+    }
+
+    .post-content{
+        margin-top: 2vh;
+        padding: 2vh 3vw;
+        font-size: smaller;
+    }
 }
 
 .sorters{
