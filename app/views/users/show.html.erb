@@ -1,7 +1,7 @@
 <div class="user-profile">
     <div class="row centre user-info">
         <div class="row col-md-12">
-            <%= image_tag("https://image.flaticon.com/icons/png/512/123/123172.png", size: "128", alt: "username", class: "profile-pic") %>
+            <%= user_image(@user, 128) %>
         </div>
         <div class="row col-md-12">
             <h3><%= @user.username %></h3>

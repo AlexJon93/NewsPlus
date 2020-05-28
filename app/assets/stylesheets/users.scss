@@ -1,7 +1,8 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+$sidebar: #101025a2;
+$sidebar-fonthover: #ffffffa4;
 
 .user-profile{
     .user-activity{
@@ -24,5 +25,61 @@
         .post-date{
             font-weight: lighter;
         }
+    }
+}
+
+.settings{
+    .settings-sidebar{
+        background-color: $sidebar;
+        height: 100%;
+        padding: 1.7vh 1vw;
+        border-radius: 3px;
+        margin-left: 1vw;
+        .row{
+            margin: 1vh 0;
+        }
+        a{
+            color: white;
+            font-weight: bolder;
+            font-size: large;
+        }
+        a:hover{
+            text-decoration: none;
+            color: $sidebar-fonthover;
+        }
+    }
+    .main-area{
+        margin-left: 10px;
+        .with-nav-tabs{
+            .panel-heading{
+                padding: 5px 5px 0 5px;
+            }
+            .nav-tabs{
+                border-bottom: none;
+            }
+            .tab-content{
+                padding: 1vh 1vw;
+            }
+        }
+    }
+
+    .tab-pane{
+        .input-group{
+            margin: 2vh 0;
+            width: 100%;
+        }
+
+        .input-group-addon{
+            min-width: 5vw;
+        }
+
+        textarea{
+            resize: none;
+        }
+    }
+
+    
+    .verification-up, .avatar-up{
+        margin-top: 2vh;
     }
 }

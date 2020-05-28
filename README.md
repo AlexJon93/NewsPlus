@@ -16,3 +16,7 @@ Date | Time
 13/05/20 | 0:39:36
 16/05/20 | 2:47:04
 25/05/20 | 
+
+## Sources
+Bootstrap3 Docs
+Rails Docs

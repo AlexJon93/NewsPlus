@@ -1,0 +1,31 @@
+<div class="personal">
+    <div class="well well-sm">
+        You can modify your details here
+    </div>
+    <%= form_with(model: @user, class: 'form-horizontal', local: true) do |f| %>
+        <div class="form-group">
+            <div class="input-group">
+                <%= f.label         :username, 'Username', class: 'input-group-addon' %>
+                <%= f.text_field    :username, class: 'form-control' %>
+            </div>
+            <div class="input-group">
+                <%= f.label         :email, 'Email', class: 'input-group-addon' %>
+                <%= f.text_field    :email, class: 'form-control' %>
+            </div>
+            <div class="input-group">
+                <%= f.label         :mobile, 'Mobile', class: 'input-group-addon' %>
+                <%= f.text_field    :mobile, class: 'form-control' %>
+            </div>
+            <div class="input-group">
+                <%= f.label         :city, 'City', class: 'input-group-addon' %>
+                <%= f.text_field    :city, class: 'form-control' %>
+            </div>
+            <div class="input-group">
+                <%= f.text_area     :intro, placeholder: 'Insert personal introduction here', rows: 10, class: 'form-control' %>
+            </div>
+            <div class="input-group">
+                <%= f.submit     "Submit", class: 'btn btn-lg btn-primary' %>
+            </div>
+        </div>
+    <% end %>
+</div>

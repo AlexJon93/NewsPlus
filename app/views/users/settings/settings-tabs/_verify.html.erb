@@ -1,0 +1,10 @@
+<div class="verify">
+    <div class="well well-sm">
+        Upload student verification
+    </div>
+    <%= user_verification(@user) %>
+    <%= form_with(url: user_image_path(@user, type: 'verify'), local: true) do |f| %>
+        <%= f.file_field :image_id, accept: 'image/*', class: 'verification-up' %>
+        <%= f.submit "Submit", disable_with: 'Submiting...' %>
+    <% end %>
+</div>
