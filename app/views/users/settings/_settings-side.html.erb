@@ -3,13 +3,13 @@
         <%= link_to fa_icon('user', text: 'My Profile'), @user %>
     </div>
     <div class="row">
-        <%= link_to fa_icon('pencil', text: "My Posts"), '#' %>
+        <%= link_to fa_icon('pencil', text: "My Posts"), user_posts_path(@user) %>
     </div>
     <div class="row">
-        <%= link_to fa_icon('comment', text: "My Comments"), '#' %>
+        <%= link_to fa_icon('comment', text: "My Comments"), user_comments_path(@user) %>
     </div>
     <div class="row">
-        <%= link_to fa_icon('reply', text: "Comments to me"), '#' %>
+        <%= link_to fa_icon('reply', text: "Comments to me"), user_replies_path(@user) %>
     </div>
     <div class="row">
         <%= link_to fa_icon('cog', text: "Settings"), '#' %>

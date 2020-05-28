@@ -24,6 +24,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def posts
+    @user = User.find(params[:id])
+  end
+
+  def comments
+    @user = User.find(params[:id])
+  end
+
+  def replies
+    @user = User.find(params[:id])
+  end
+
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)

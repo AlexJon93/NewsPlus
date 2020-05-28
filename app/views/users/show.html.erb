@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <h4 class='col-md-2 col-md-offset-4'><%= fa_icon "calendar", text: @user.created_at.strftime("%Y-%m-%d") %></h4>
-            <h4 class='col-md-2'><%= fa_icon "map-marker", text: "Pallet Town" %></h4>
+            <h4 class='col-md-2'><%= fa_icon "map-marker", text: @user.city %></h4>
         </div>
     </div>
     <div class="row user-activity">

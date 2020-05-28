@@ -1,0 +1,9 @@
+<%= render layout: 'users/settings/settings' do %>
+    <div class="well">
+        <% @user.posts.order(:created_at).each do |post| %>
+            <div class="panel">
+                <h3><%= post.title %></h3>
+            </div>
+        <% end %>
+    </div>
+<% end %>

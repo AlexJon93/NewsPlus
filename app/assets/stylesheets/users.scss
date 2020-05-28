@@ -1,7 +1,7 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$sidebar: #101025a2;
+$sidebar: #17395794;
 $sidebar-fonthover: #ffffffa4;
 
 .user-profile{
@@ -31,7 +31,7 @@ $sidebar-fonthover: #ffffffa4;
 .settings{
     .settings-sidebar{
         background-color: $sidebar;
-        height: 100%;
+        min-height: 78vh;
         padding: 1.7vh 1vw;
         border-radius: 3px;
         margin-left: 1vw;
@@ -40,8 +40,7 @@ $sidebar-fonthover: #ffffffa4;
         }
         a{
             color: white;
-            font-weight: bolder;
-            font-size: large;
+            font-size: larger;
         }
         a:hover{
             text-decoration: none;
