@@ -104,3 +104,16 @@ $sidebar-fonthover: #ffffffa4;
         margin-left: 2vw;
     }
 }
+
+.user-replies{
+    .panel{
+        padding-top: 1vh;
+    }
+}
+
+.user-comments, .user-replies{
+    .row{
+        padding-left: 2vw;
+        padding-bottom: 1vh;
+    }
+}

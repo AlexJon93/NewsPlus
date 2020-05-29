@@ -2,7 +2,7 @@
     <h4>Recent Members</h4>
     <% for i in 0..0 do %>
         <div class='row'>
-            <% @recent_users.each do |user| %>
+            <% User.order(:last_active_at).each do |user| %>
                 <%= render partial: 'posts/homepage/sidebar/recent_icon', locals: {user: user} %>
             <% end %>
         </div>

@@ -1,32 +1,65 @@
-<div class="jumbotron post-view">
-    <div class="post-header row">
-        <div class="post-title row">
-            <h2><%= @post.title %></h2>
+<%= render layout: 'layouts/main' do %>  
+    <div class="jumbotron post-view">
+        <div class="post-header row">
+            <div class="post-title row">
+                <h2><%= @post.title %></h2>
+            </div>
+            <div class="post-details row">
+                <div class="post-topic col-md-1">
+                    <span><%= @post.topic %></span>
+                </div>
+                <div class="post-comments col-md-1 col-md-offset-9">
+                    <%= fa_icon "comments", text: @post.comments.size %>
+                </div>
+                <div class="post-views col-md-1">
+                    <%= fa_icon "eye", text: @post.views %>
+                </div>
+            </div>
         </div>
-        <div class="post-details row">
-            <div class="post-topic col-md-1">
-                <span><%= @post.topic %></span>
+        <div class="post-user row">
+            <div class="col-md-1">
+                <%= default_image 64 %>
             </div>
-            <div class="post-comments col-md-1 col-md-offset-9">
-                <%= fa_icon "comments", text: 0 %>
+            <div class="col-md-1 post-username">
+                <%= link_to @post.user.username, @post.user %>
             </div>
-            <div class="post-views col-md-1">
-                <%= fa_icon "eye", text: @post.views %>
+            <div class="col-md-2 post-date">
+                <%= @post.created_at %>
+            </div>
+        </div>
+        <div class="post-content row">
+            <p><%= @post.content %></p>
+        </div>
+        <div class="post-comments">
+            <div class="new-comment">
+                <h2>Comments</h2>
+                <%= form_with(url: post_comments_path(@post), class:'form-horizontal comment-form', local: true) do |f| %>
+                    <div class="form-group">
+                        <%= f.text_area     :content, placeholder: 'Enter your comment here', rows: '5', class: 'form-control' %>
+                    </div>
+
+                    <div class="form-group">
+                        <%= f.submit "Submit", class: 'btn btn-primary'%>
+                    </div>
+                <% end %>
+            </div>
+            <div class="comment-list">
+                <% @post.comments.each do |comment| %>
+                    <div class="panel">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <%= comment.content %>
+                            </div>
+                            <div class="col-md-1">
+                                <%= link_to comment.user.username, comment.user %>
+                            </div>
+                            <div class="col-md-2">
+                                <%= comment.created_at %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
             </div>
         </div>
     </div>
-    <div class="post-user row">
-        <div class="col-md-1">
-            <%= default_image 64 %>
-        </div>
-        <div class="col-md-1 post-username">
-            <%= link_to @post.user.username, @post.user %>
-        </div>
-        <div class="col-md-2 post-date">
-            <%= @post.created_at %>
-        </div>
-    </div>
-    <div class="post-content row">
-        <p><%= @post.content %></p>
-    </div>
-</div>
+<% end %>

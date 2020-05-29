@@ -10,7 +10,7 @@
             <div class='item col-md-2'><%= link_to post.user.username, post.user %></div>
             <div class='item col-md-2'><%= post.created_at %></div>
             <div class='item col-md-2'><%= post.topic %></div>
-            <div class='item col-md-1 col-md-offset-4'><%= fa_icon "comments", text: 0 %></div>
+            <div class='item col-md-1 col-md-offset-4'><%= fa_icon "comments", text: post.comments.size %></div>
             <div class='item col-md-1'><%= fa_icon "eye", text: post.views %></div>
         </div>
     </div>

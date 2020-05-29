@@ -1,6 +1,6 @@
 <div class='panel populars'>
     <h4>Post</h4>
-    <% @popular_posts.each do |post| %>
+    <% Post.order(:views).each do |post| %>
         <a class='popular_post'><span class='post_title'><%= post[:title] %></span><span class='post_views'><%= fa_icon "eye", text: post[:views] %></span></a>
     <% end %>
 </div>

@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   post      '/:id/image',           to: 'users#upload_image', as: 'user_image'
 
   resources :users, only: [:create, :show, :edit, :update]
-  resources :posts
+  resources :posts do
+    resources :comments, only: [:create]
+  end
 end

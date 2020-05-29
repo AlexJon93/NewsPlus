@@ -8,11 +8,6 @@ class PostsController < ApplicationController
         session[:toggled] = []
 
         @posts = Post.order(:created_at)
-
-        @popular_posts = Post.order(:views)
-        @recent_users = User.order(:last_active_at)
-
-        @topics = Post.topics
     end
 
     def new
