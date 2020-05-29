@@ -82,3 +82,25 @@ $sidebar-fonthover: #ffffffa4;
         margin-top: 2vh;
     }
 }
+
+.user-posts{
+    .topic{
+        padding: 0.5vh 1vw;
+        background-color: $sidebar;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .row{
+        display: table;
+    }
+    .detail{
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+    }
+
+    .title{
+        margin-left: 2vw;
+    }
+}
