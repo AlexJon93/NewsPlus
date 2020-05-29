@@ -1,0 +1,29 @@
+<%= render layout: 'users/settings/settings' do %>
+    <%# panel styling taken from https://bootsnipp.com/snippets/MaA0A %>
+    <div class="panel with-nav-tabs panel-default">
+        <div class="panel-heading">
+            <ul class="nav nav-tabs" role='tablist'>
+                <li role='presentation' class='active'><a role='tab' data-toggle='tab' class='tab' href='#personal'>Personal Info</a></li>
+                <li role='presentation'><a role='tab' data-toggle='tab' class='tab' href='#avatar'>Avatar</a></li>
+                <li role='presentation'><a role='tab' data-toggle='tab' class='tab' href='#password'>Password</a></li>
+                <li role='presentation'><a role='tab' data-toggle='tab' class='tab' href='#verify'>Verification</a></li>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div role='tabpanel' class='tab-pane active' id='personal'>
+                    <%= render 'users/settings/settings-tabs/personal'%>
+                </div>        
+                <div role='tabpanel' class='tab-pane' id='avatar'>
+                    <%= render 'users/settings/settings-tabs/avatar'%>
+                </div>
+                <div role='tabpanel' class='tab-pane' id='password'>
+                    <%= render 'users/settings/settings-tabs/password'%>
+                </div>
+                <div role='tabpanel' class='tab-pane' id='verify'>
+                    <%= render 'users/settings/settings-tabs/verify'%>
+                </div>        
+            </div>
+        </div>
+    </div>
+<% end %>

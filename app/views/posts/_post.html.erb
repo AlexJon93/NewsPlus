@@ -1,16 +1,16 @@
 <div class="post panel row">
     <div class="photo col-md-1">
-        <h2><%= image_tag("https://image.flaticon.com/icons/png/512/123/123172.png", size: "64", alt: "username", class: "profile-pic") %></h2>
+        <h2><%= user_image(post.user, 64) %></h2>
     </div>
     <div class="content col-md-11">
         <div class="title row">
-            <h3><%= post.title %></h3>
+            <h3><%= link_to post.title, post %></h3>
         </div>
         <div class="row">
             <div class='item col-md-2'><%= link_to post.user.username, post.user %></div>
             <div class='item col-md-2'><%= post.created_at %></div>
             <div class='item col-md-2'><%= post.topic %></div>
-            <div class='item col-md-1 col-md-offset-4'><%= fa_icon "comments", text: 36 %></div>
+            <div class='item col-md-1 col-md-offset-4'><%= fa_icon "comments", text: post.comments.size %></div>
             <div class='item col-md-1'><%= fa_icon "eye", text: post.views %></div>
         </div>
     </div>

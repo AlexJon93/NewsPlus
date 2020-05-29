@@ -11,6 +11,7 @@ class User < ApplicationRecord
     validates :mobile,      presence: true, format: {with: VALID_PHONE_REGEX},
                                             length: {minimum: 9, maximum:13}
     has_many :posts
+    has_many :comments
 end
 
 # User schema:

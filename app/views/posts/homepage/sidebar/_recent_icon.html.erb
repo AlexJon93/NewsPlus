@@ -1,6 +1,6 @@
 <div class='col-md-4 user'>
     <%= link_to User.find(user[:id]), action: 'go' do %>
-        <p><%= image_tag("https://image.flaticon.com/icons/png/512/123/123172.png", size: "64", alt: "username", class: "recent-pic") %></p>
+        <p><%= user_image(User.find(user[:id]) ,64) %></p>
         <p class='name'><%= user[:username] %></p>
     <% end %>
 </div>

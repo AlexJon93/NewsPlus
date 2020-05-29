@@ -1,0 +1,10 @@
+<div class="avatar">
+    <div class="well well-sm">
+        Change your user avatar
+    </div>
+    <%= user_image(@user, 512) %>
+    <%= form_with(url: user_image_path(@user, type: 'avatar'), local: true) do |f| %>
+        <%= f.file_field :image_id, accept: 'image/*', class: 'avatar-up' %>
+        <%= f.submit "Submit", disable_with: 'Submiting...' %>
+    <% end %>
+</div>

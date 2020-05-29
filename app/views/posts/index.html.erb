@@ -1,12 +1,8 @@
-
-<div class='main-section col-md-9'>
+<%= render layout: 'layouts/main' do %>    
     <%= render 'posts/homepage/filters' %>
     <div class='posts'>
         <% @posts.each do |post| %>
             <%= render partial: 'post', locals: {post: post} %>
         <% end %>
     </div>
-</div>
-<div class='sidebar col-md-3'>
-    <%= render 'posts/homepage/sidebar' %>
-</div>
+<% end %>

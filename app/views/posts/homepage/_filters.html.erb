@@ -3,7 +3,7 @@
         <div class='btn-group' role='group'>
             <%= link_to 'Recent Post', update_home_path(filter: 'recent'), class: 'btn filterbtn btn-default selected', remote: true%>
             <%= link_to 'Selected Post', update_home_path(filter: 'filtered'), class: 'btn filterbtn btn-default', remote: true%>
-            <%= link_to 'My Setting', update_home_path(filter: 'custom'), class: 'btn filterbtn btn-default', remote: true%>
+            <% if logged_in? %><%= link_to 'My Setting', edit_user_path(current_user.id), class: 'btn filterbtn btn-default' %><% end %>
         </div>
     </div>
     <div class='searcher col-md-5'>
