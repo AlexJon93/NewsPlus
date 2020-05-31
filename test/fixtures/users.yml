@@ -8,6 +8,7 @@ one:
   username: Test Guy
   email: test@email.com
   mobile: 0412345678
+  password_digest: <%= User.digest('password') %>
 # column: value
 #
 two: {}

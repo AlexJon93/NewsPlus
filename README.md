@@ -1,7 +1,7 @@
 # RAD Assign - Alex Jarvis
 ### s3607170 | Alexander Jarvis
 
-- Level Attempted: Credit
+- Level Attempted: 80+
 - Heroku link: https://dry-lake-74310.herokuapp.com/
 
 ## Timelog
@@ -18,8 +18,11 @@ Date | Time
 25/05/20 | 4:40:16
 27/05/20 | 6:17:50
 28/05/20 | 4:50:23
-29/05/20 |
+29/05/20 | 2:55:52
+30/05/20 | 4:19:53
+31/05/20 | 
+**Total**    | 
 
 ## Sources
-Bootstrap3 Docs
-Rails Docs
+* Bootstrap3 Docs
+* Rails Docs

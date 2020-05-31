@@ -38,6 +38,8 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'rails-controller-testing'
+  gem 'simplecov', require: false
   gem 'minitest',                 '5.11.3'
   gem 'minitest-reporters',       '1.3.8'
   gem 'guard',                    '2.16.2'

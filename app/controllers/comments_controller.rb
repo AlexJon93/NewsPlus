@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+
+    # post path for creating new comments
     def create
         @post = Post.find(params[:post_id])
 
