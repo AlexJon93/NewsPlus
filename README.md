@@ -1,7 +1,7 @@
 # RAD Assign - Alex Jarvis
 ### s3607170 | Alexander Jarvis
 
-- Level Attempted: 80+
+- Level Attempted: 90+
 - Heroku link: https://dry-lake-74310.herokuapp.com/
 
 ## Timelog
@@ -26,3 +26,9 @@ Date | Time
 ## Sources
 * Bootstrap3 Docs
 * Rails Docs
+
+## Notes
+
+I am receiving the error `An error was encountered when contacting the add-on partner to create sendgrid:starter: Error Provisioning User - User status - banned` when trying to provision for Sendgrid.
+
+I have submitted a ticket to Heroku, but have received no response as yet.
