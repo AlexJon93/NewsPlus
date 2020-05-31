@@ -1,0 +1,22 @@
+<div class="panel">
+    <% if comment.reply %>
+        <div class="row well">
+            <%= comment.reply.content %>
+        </div>
+    <% end %>
+    <div class="row">
+        <div class="col-md-8 comment-content" id="comment-content-<%= comment.id%>">
+            <%= comment.content %>
+        </div>
+        <div class="col-md-1">
+            <span hidden=true id="comment-user-<%= comment.id%>"><%= comment.user.username %></span>
+            <%= link_to comment.user.username, comment.user %>
+        </div>
+        <div class="col-md-2">
+            <%= comment.created_at %>
+        </div>
+        <div class="col-md-1">
+            <%= button_tag 'Reply', value: comment.id, class: 'replybtn btn btn-default' %>
+        </div>
+    </div>
+</div>

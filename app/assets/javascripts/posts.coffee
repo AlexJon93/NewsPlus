@@ -7,4 +7,10 @@ document.addEventListener("turbolinks:load", ->
         clicked_val = $(this).toggleClass('active')
     $('.filterbtn').click ->
         $(this).addClass('selected').siblings().removeClass('selected')
+    $('.replybtn').click ->
+        reply = $("#comment-content-#{$(this).val()}").html()
+        user = $("#comment-user-#{$(this).val()}").html()
+        $('.reply-hdn').val($(this).val())
+        $('.replying').html("Replying to '#{reply}' - #{user}")
+        $('.replying').show()
 )
