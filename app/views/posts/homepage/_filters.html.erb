@@ -7,12 +7,15 @@
         </div>
     </div>
     <div class='searcher col-md-5'>
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search">
-            <span class='input-group-btn'>
-                <button type="button" class="btn btn-default"><%= fa_icon "search" %></button>
-            </span>
-        </div>
+        <%= form_with(url: update_home_path, method: 'get', class:'form-horizontal post-form', remote: true) do |f| %>
+            <div class="input-group">
+                <%= f.text_field    :search, placeholder: 'Search', class: 'form-control' %>
+                <%= hidden_field_tag :filter, 'search' %>
+                <span class='input-group-btn'>
+                    <%= button_tag fa_icon('search'), type: 'submit', class: 'btn btn-default' %>
+                </span>
+            </div>
+        <% end %>
     </div>
     <div class='new-post col-md-2'>
         <% if logged_in? %><%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>

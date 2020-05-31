@@ -71,5 +71,9 @@ class UserTest < ActiveSupport::TestCase
       assert_not @user.valid?, "#{invalid_mobile.inspect} should be invalid"
     end
   end
+
+  test 'authenticated? should not accept nil digest' do
+    assert_not @user.authenticated?('')
+  end
   
 end

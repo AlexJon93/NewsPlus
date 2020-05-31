@@ -8,7 +8,9 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
     test 'should show valid post' do
         login_as(@user)
-        get post_path(@post)
+        assert_difference "Post.find(#{@post.id}).views", 1 do
+            get post_path(@post)
+        end
         assert_response :success
         assert_select 'h2', @post.title
         assert_select 'p', @post.content

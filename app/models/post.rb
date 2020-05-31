@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  scope :search_content, ->(substring) { where('content like ? or title like ?', "%#{substring}%", "%#{substring}%") }
+
   belongs_to  :user
   has_many    :comments
   validates   :user_id, presence: true

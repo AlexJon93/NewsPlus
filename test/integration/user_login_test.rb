@@ -23,6 +23,7 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     delete logout_path
     assert_not is_logged_in?
     assert_redirected_to login_path
+    delete logout_path
   end
 
   test 'should not login with invalid details' do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_063221) do
+ActiveRecord::Schema.define(version: 2020_05_31_022017) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(version: 2020_05_29_063221) do
     t.string "city"
     t.text "intro"
     t.string "verification"
+    t.string "remember_digest"
+    t.string "reset_digest"
+    t.datetime "reset_at"
   end
 
 end

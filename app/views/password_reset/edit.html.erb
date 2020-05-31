@@ -1,0 +1,24 @@
+<div class="jumbotron form">
+    <h1>Reset Password</h1>
+    <div class="row">
+        <div class='col-md-6 col-md-offset-3'>
+            <%= form_with(model: @user, url: password_reset_path(params[:id]), local: true) do |f| %>
+                <%= hidden_field_tag :email, @user.email %>
+                <div class="row">
+                    <%= f.label             :password, 'Password', class: 'col-md-3' %>
+                    <%= f.password_field    :password, placeholder: 'enter password', class: 'col-md-9' %>
+                </div>
+                <div class="row">
+                    <%= f.label             :password, 'Confirm password', class: 'col-md-3' %>
+                    <%= f.password_field    :password_confirmation, placeholder: 'confirm new password', class: 'col-md-9' %>
+                </div>
+                <div class="row">
+                    <%= f.submit "Submit", class: 'col-md-9 col-md-offset-3 btn btn-primary'%>
+                </div>
+                <div class="row back-button">
+                    <%= link_to 'Back', login_path, class: 'col-md-9 col-md-offset-3 btn btn-primary' %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
