@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if user&.authenticate(params[:session][:password])
       login user
+      params[:session][:remember] == '1' ? remember(user) : forget(user)
       flash[:success] = 'Login successful!'
       redirect_to root_path
     else
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
 
   # post path for deleting current session
   def destroy
-    logout
+    logout if logged_in?
     redirect_to login_path
   end
 end

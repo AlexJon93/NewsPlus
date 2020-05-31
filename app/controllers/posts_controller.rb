@@ -2,6 +2,9 @@ class PostsController < ApplicationController
     # get path for single post on id
     def show
         @post = Post.find(params[:id])
+        
+        @post.views += 1
+        @post.save
     end
 
     # main index page for all posts
@@ -46,6 +49,8 @@ class PostsController < ApplicationController
         case session[:filter]
         when 'filtered'
             @posts = Post.where(topic: session[:toggled])
+        when 'search'
+            @posts = Post.search_content(params[:search])
         else
             @posts = Post.order(:created_at)
         end

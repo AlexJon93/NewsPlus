@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   # method for saving posted image locally
   def upload_image
     uploaded_image = params[:image_id]
-    image_size = uploaded_image.size / 1024 / 1024
+    image_size = uploaded_image.size
     filename = uploaded_image.original_filename
     @user = User.find(params[:id])
 
@@ -70,7 +70,7 @@ class UsersController < ApplicationController
     end
     
     # saves the file locally if image size is <= 2MB and filename is not nil
-    if @user.save and image_size <= 2
+    if @user.save and image_size <= 2.megabytes
       File.open(Rails.root.join('app', 'assets', 'images', filename), 'wb') do |file|
         file.write(uploaded_image.read)
       end
